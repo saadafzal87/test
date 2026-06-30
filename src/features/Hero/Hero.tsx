@@ -83,15 +83,10 @@ export const Hero: FC = () => {
         </div>
 
         <div className={styles.bookWrapper} aria-hidden="true">
-          <div className={styles.bookStack}>
-            <div className={[styles.bookCard, styles.bookCard3].join(' ')} />
-            <div className={[styles.bookCard, styles.bookCard2].join(' ')} />
-            <div className={styles.bookCover}>
               <img src={mainCover} alt="Book cover" className={styles.bookCoverImage} />
-            </div>
           </div>
         </div>
-      </div>
+
     </section>
   );
 };
