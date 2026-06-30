@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type RefObject } from 'react';
 
 interface Options {
   threshold?: number;
@@ -12,9 +12,9 @@ interface Options {
  */
 export function useIntersectionObserver<T extends HTMLElement>(
   options: Options = {}
-): [React.RefObject<T>, boolean] {
+): [RefObject<T | null>, boolean] {
   const { threshold = 0.15, rootMargin = '0px', triggerOnce = true } = options;
-  const ref = useRef<T>(null);
+  const ref = useRef<T | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
