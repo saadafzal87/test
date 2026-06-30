@@ -1,0 +1,14 @@
+.wrapper {
+  opacity: 0;
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.wrapper--up    { transform: translateY(32px); }
+.wrapper--left  { transform: translateX(-32px); }
+.wrapper--right { transform: translateX(32px); }
+.wrapper--none  { transform: none; }
+
+.wrapper--visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
